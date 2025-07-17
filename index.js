@@ -34,7 +34,7 @@ app.post("/weather",async(req,res) => {
     const lon = location.lon;
 
     // Get forecast data
-    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=75391309c2d8f6557c01a7baebb07873`;
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_ID}`;
     const weatherResponse = await axios.get(forecastURL);
     const forecastList = weatherResponse.data.list;
 
